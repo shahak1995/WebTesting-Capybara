@@ -13,10 +13,11 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.click_on_male_button
       @sparta_demo_site.registration_page.click_on_female_button
       @sparta_demo_site.registration_page.fill_in_degree_field('Maths')
-      @sparta_demo_site.registration_page.choose_university_field('University of Oxford')
+      @sparta_demo_site.registration_page.choose_university_dropdown('University of Oxford')
       @sparta_demo_site.registration_page.fill_in_first_address_field('12 downham road')
       @sparta_demo_site.registration_page.fill_in_second_address_field('cranston estate')
       @sparta_demo_site.registration_page.fill_in_city_field('london')
+      @sparta_demo_site.registration_page.choose_county_dropdown('Hertfordshire')
       sleep 5
 
     end 
