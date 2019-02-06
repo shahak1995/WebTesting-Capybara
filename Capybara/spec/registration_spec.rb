@@ -26,7 +26,10 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.click_on_choose_file_button
       @sparta_demo_site.registration_page.click_on_sdet_button
       @sparta_demo_site.registration_page.click_on_devops_button
-      sleep 5
+      @sparta_demo_site.registration_page.click_on_terms_checkbox
+      @sparta_demo_site.registration_page.change_experience_slider_value
+      @sparta_demo_site.registration_page.click_on_sign_in_button
+      sleep 10
 
     end 
   end

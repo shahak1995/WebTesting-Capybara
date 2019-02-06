@@ -25,6 +25,9 @@ class Registration
   CHOOSE_FILE_BUTTON_XPATH = '/html/body/div/form/div[18]/div/input'
   SDET_BUTTON_XPATH = '/html/body/div/form/div[20]/div[1]/label'
   DEVOPS_BUTTON_XPATH = '/html/body/div/form/div[20]/div[2]/label'
+  TERMS_CHECKBOX_ID = 'terms'
+  EXPERIENCE_SLIDER_XPATH = '//*[@id="experienceSlider"]'
+  SIGN_IN_BUTTON_XPATH = '/html/body/div/form/button'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -108,5 +111,17 @@ class Registration
 
   def click_on_devops_button
     find(:xpath, DEVOPS_BUTTON_XPATH).click
+  end 
+
+  def click_on_terms_checkbox
+    find(:id, TERMS_CHECKBOX_ID).check
+  end 
+
+  def change_experience_slider_value
+    find(:xpath, EXPERIENCE_SLIDER_XPATH).set
+  end 
+
+  def click_on_sign_in_button
+    find(:xpath, SIGN_IN_BUTTON_XPATH).click
   end 
 end
