@@ -18,6 +18,9 @@ class Registration
   CITY_FIELD_ID = 'inputCity'
   COUNTY_DROPDOWN_ID = 'inputCounty'
   POSTCODE_FIELD_ID = 'inputPostcode'
+  EMAIL_ADDRESS_FIELD_ID = 'inputemailaddress'
+  SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
+  PHONE_NUMBER_FIELD_ID = 'exampleFormControlInput1'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -73,5 +76,17 @@ class Registration
 
   def fill_in_postcode_field(postcode)
     fill_in(POSTCODE_FIELD_ID, :with => postcode)
+  end 
+
+  def fill_in_email_address_field(email)
+    fill_in(EMAIL_ADDRESS_FIELD_ID, :with => email)
+  end 
+
+  def fill_in_skills_field(skills)
+    fill_in(SKILLS_FIELD_ID, :with => skills)
+  end 
+
+  def fill_in_phone_number_field(number)
+    fill_in(PHONE_NUMBER_FIELD_ID, :with => number)
   end 
 end

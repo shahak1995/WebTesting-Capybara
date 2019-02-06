@@ -19,6 +19,9 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.fill_in_city_field('london')
       @sparta_demo_site.registration_page.choose_county_dropdown('Hertfordshire')
       @sparta_demo_site.registration_page.fill_in_postcode_field('n1 6td')
+      @sparta_demo_site.registration_page.fill_in_email_address_field('shak-attak@hotmail.com')
+      @sparta_demo_site.registration_page.fill_in_skills_field('ndjandkandkabdkhjbaskdhbakd')
+      @sparta_demo_site.registration_page.fill_in_phone_number_field('07714265357')
       sleep 5
 
     end 
