@@ -13,6 +13,7 @@ class Registration
   GENDER_FEMALE_BUTTON = '/html/body/div/form/div[6]/label'
   DEGREE_FIELD_XPATH = '/html/body/div/form/div[7]/div/input'
   UNIVERSITY_FIELD_ID = 'inputUni'
+  ADDRESS_FIELD_ID = 'inputAddress'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -44,5 +45,13 @@ class Registration
 
   def fill_in_degree_field(degree)
     find(:xpath, DEGREE_FIELD_XPATH).set("#{degree}")
+  end 
+
+  def choose_university_field
+    select('option', :from => 'University of Oxford')
+  end 
+
+  def fill_in_first_address_field(addressone)
+    fill_in(ADDRESS_FIELD_ID, :with => addressone)
   end 
 end

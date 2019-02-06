@@ -13,6 +13,8 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.click_on_male_button
       @sparta_demo_site.registration_page.click_on_female_button
       @sparta_demo_site.registration_page.fill_in_degree_field('Maths')
+      # @sparta_demo_site.registration_page.choose_university_field
+      @sparta_demo_site.registration_page.fill_in_first_address_field('12 downham road')
       sleep 5
 
     end 
