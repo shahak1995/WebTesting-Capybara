@@ -12,8 +12,11 @@ class Registration
   GENDER_MALE_BUTTON = '/html/body/div/form/div[5]/label'
   GENDER_FEMALE_BUTTON = '/html/body/div/form/div[6]/label'
   DEGREE_FIELD_XPATH = '/html/body/div/form/div[7]/div/input'
-  UNIVERSITY_FIELD_ID = 'inputUni'
+  UNIVERSITY_DROPDOWN_ID = 'inputUni'
   ADDRESS_FIELD_ID = 'inputAddress'
+  ADDRESS_TWO_FIELD_ID = 'inputAddress2'
+  CITY_FIELD_ID = 'inputCity'
+  COUNTY_DROPDOWN_ID = 'inputCounty'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -48,10 +51,18 @@ class Registration
   end 
 
   def choose_university_field(university)
-    select university, :from => UNIVERSITY_FIELD_ID
+    select university, :from => UNIVERSITY_DROPDOWN_ID
   end 
 
   def fill_in_first_address_field(addressone)
     fill_in(ADDRESS_FIELD_ID, :with => addressone)
+  end 
+
+  def fill_in_second_address_field(addresstwo)
+    fill_in(ADDRESS_TWO_FIELD_ID, :with => addresstwo)
+  end 
+
+  def fill_in_city_field(city)
+    fill_in(CITY_FIELD_ID, :with => city)
   end 
 end
