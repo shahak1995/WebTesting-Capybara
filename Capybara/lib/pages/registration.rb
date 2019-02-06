@@ -21,6 +21,8 @@ class Registration
   EMAIL_ADDRESS_FIELD_ID = 'inputemailaddress'
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONE_NUMBER_FIELD_ID = 'exampleFormControlInput1'
+  LINKEDIN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
+  CHOOSE_FILE_BUTTON_XPATH = ''
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -88,5 +90,9 @@ class Registration
 
   def fill_in_phone_number_field(number)
     fill_in(PHONE_NUMBER_FIELD_ID, :with => number)
+  end 
+
+  def fill_in_linkedin_field(url)
+    find(:xpath, LINKEDIN_FIELD_XPATH).set("#{url}")
   end 
 end
