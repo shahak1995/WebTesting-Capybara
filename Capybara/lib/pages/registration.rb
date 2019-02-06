@@ -47,8 +47,8 @@ class Registration
     find(:xpath, DEGREE_FIELD_XPATH).set("#{degree}")
   end 
 
-  def choose_university_field
-    select('option', :from => 'University of Oxford')
+  def choose_university_field(university)
+    select university, :from => UNIVERSITY_FIELD_ID
   end 
 
   def fill_in_first_address_field(addressone)
