@@ -24,6 +24,8 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.fill_in_phone_number_field('07714265357')
       @sparta_demo_site.registration_page.fill_in_linkedin_field('http://www.linkedin.com')
       @sparta_demo_site.registration_page.click_on_choose_file_button
+      @sparta_demo_site.registration_page.click_on_sdet_button
+      @sparta_demo_site.registration_page.click_on_devops_button
       sleep 5
 
     end 

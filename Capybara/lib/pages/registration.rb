@@ -23,6 +23,8 @@ class Registration
   PHONE_NUMBER_FIELD_ID = 'exampleFormControlInput1'
   LINKEDIN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
   CHOOSE_FILE_BUTTON_XPATH = '/html/body/div/form/div[18]/div/input'
+  SDET_BUTTON_XPATH = '/html/body/div/form/div[20]/div[1]/label'
+  DEVOPS_BUTTON_XPATH = '/html/body/div/form/div[20]/div[2]/label'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -99,4 +101,12 @@ class Registration
   def click_on_choose_file_button
     find(:xpath, CHOOSE_FILE_BUTTON_XPATH).click
   end
+
+  def click_on_sdet_button
+    find(:xpath, SDET_BUTTON_XPATH).click
+  end 
+
+  def click_on_devops_button
+    find(:xpath, DEVOPS_BUTTON_XPATH).click
+  end 
 end
