@@ -22,7 +22,7 @@ class Registration
   SKILLS_FIELD_ID = 'exampleFormControlTextarea1'
   PHONE_NUMBER_FIELD_ID = 'exampleFormControlInput1'
   LINKEDIN_FIELD_XPATH = '/html/body/div/form/div[17]/div/input'
-  CHOOSE_FILE_BUTTON_XPATH = ''
+  CHOOSE_FILE_BUTTON_XPATH = '/html/body/div/form/div[18]/div/input'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -95,4 +95,8 @@ class Registration
   def fill_in_linkedin_field(url)
     find(:xpath, LINKEDIN_FIELD_XPATH).set("#{url}")
   end 
+
+  def click_on_choose_file_button
+    find(:xpath, CHOOSE_FILE_BUTTON_XPATH).click
+  end
 end
