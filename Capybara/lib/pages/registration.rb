@@ -17,6 +17,7 @@ class Registration
   ADDRESS_TWO_FIELD_ID = 'inputAddress2'
   CITY_FIELD_ID = 'inputCity'
   COUNTY_DROPDOWN_ID = 'inputCounty'
+  POSTCODE_FIELD_ID = 'inputPostcode'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -68,5 +69,9 @@ class Registration
 
   def choose_county_dropdown(county)
     select county, :from => COUNTY_DROPDOWN_ID
+  end 
+
+  def fill_in_postcode_field(postcode)
+    fill_in(POSTCODE_FIELD_ID, :with => postcode)
   end 
 end

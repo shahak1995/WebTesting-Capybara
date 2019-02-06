@@ -18,6 +18,7 @@ describe 'testing a correct path for sparta registration' do
       @sparta_demo_site.registration_page.fill_in_second_address_field('cranston estate')
       @sparta_demo_site.registration_page.fill_in_city_field('london')
       @sparta_demo_site.registration_page.choose_county_dropdown('Hertfordshire')
+      @sparta_demo_site.registration_page.fill_in_postcode_field('n1 6td')
       sleep 5
 
     end 
