@@ -12,9 +12,9 @@ This POM helps to automate tests on a webpage through the use of the capybara ge
 * Capybara 
 
 ### How to download
-1. Open up your preffered web browser
-2. Enter this url or simply click on this link: https://github.com/shahak1995/WebTesting-Capybara
-3. Click on the green button on the right to clone or download the repo
+1. Git clone 'https://github.com/shahak1995/WebTesting-Capybara'
+2. Run 'bundle' in the terminal to install the gems
+3. Run 'rspec'
 
 ### How to use
 1. Open the folder through a code editor of your choice

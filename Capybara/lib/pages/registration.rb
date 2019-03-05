@@ -26,8 +26,9 @@ class Registration
   SDET_BUTTON_XPATH = '/html/body/div/form/div[20]/div[1]/label'
   DEVOPS_BUTTON_XPATH = '/html/body/div/form/div[20]/div[2]/label'
   TERMS_CHECKBOX_ID = 'terms'
-  EXPERIENCE_SLIDER_XPATH = '//*[@id="experienceSlider"]'
+  # EXPERIENCE_SLIDER_XPATH = '//*[@id="experienceSlider"]'
   SIGN_IN_BUTTON_XPATH = '/html/body/div/form/button'
+  CONFIRMATION_PAGE_CONTAINER = '.container > h3'
 
   def visit_registration_page
     visit(REGISTRATION_PAGE_URL)
@@ -87,19 +88,19 @@ class Registration
 
   def fill_in_email_address_field(email)
     fill_in(EMAIL_ADDRESS_FIELD_ID, :with => email)
-  end 
+  end
 
   def fill_in_skills_field(skills)
     fill_in(SKILLS_FIELD_ID, :with => skills)
-  end 
+  end
 
   def fill_in_phone_number_field(number)
     fill_in(PHONE_NUMBER_FIELD_ID, :with => number)
-  end 
+  end
 
   def fill_in_linkedin_field(url)
     find(:xpath, LINKEDIN_FIELD_XPATH).set("#{url}")
-  end 
+  end
 
   def click_on_choose_file_button
     find(:xpath, CHOOSE_FILE_BUTTON_XPATH).click
@@ -107,21 +108,25 @@ class Registration
 
   def click_on_sdet_button
     find(:xpath, SDET_BUTTON_XPATH).click
-  end 
+  end
 
   def click_on_devops_button
     find(:xpath, DEVOPS_BUTTON_XPATH).click
-  end 
+  end
 
   def click_on_terms_checkbox
     find(:id, TERMS_CHECKBOX_ID).check
   end 
 
-  def change_experience_slider_value
-    find(:xpath, EXPERIENCE_SLIDER_XPATH).set
-  end 
+  # def change_experience_slider_value
+  #   find(:xpath, EXPERIENCE_SLIDER_XPATH).set
+  # end
 
   def click_on_sign_in_button
     find(:xpath, SIGN_IN_BUTTON_XPATH).click
-  end 
+  end
+
+  def direct_to_confirmation_page
+    find(:css, CONFIRMATION_PAGE_CONTAINER).text
+  end
 end
